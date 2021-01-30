@@ -121,3 +121,21 @@ document.addEventListener('DOMContentLoaded', () =>
     .then(setCurrentProducts)
     .then(() => render(currentProducts, currentPagination))
 );
+
+//Feature 1 - Browse pages
+selectPage.addEventListener('change', event => {
+  fetchProducts(parseInt(event.target.value),selectShow.value)
+    .then(setCurrentProducts)
+    .then(() => render(currentProducts, currentPagination));
+});
+
+//Feature 2 - Filter by brands
+
+const productsByBrand = (brand) =>{
+  var i = 0;
+  while(i<marketplace.length)
+  {
+    
+  }
+}
+
