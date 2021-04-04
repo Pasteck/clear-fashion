@@ -2,69 +2,97 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>👕 Clear Fahion | Environmentally & human-friendly clothes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Clear Fashion Mode Clean</title>
+    <link rel="icon" type="image/png" href="tee.jpg" />
   </head>
   <body>
-    <h1>Clear fashion</h1>
+    <div class="jumbotron text-center">
+      <h1 class="text-success">Clear Fashion</h1>
+      <p class="text-success">Sustainable Fashion, for a better environment !</p>
+    </div>
     <section id="options">
-      <div id="show">
-        <label for="show-select">Show:</label>
-        <select name="show" id="show-select">
-          <option value="12">12</option>
-          <option value="24">24</option>
-          <option value="48">48</option>
-        </select>
-      </div>
-      <div id="page">
-        <label for="page-select">Go to page:</label>
-        <select name="page" id="page-select"> </select>
-      </div>
-      <div id="filters">
-        <span>By reasonable price</span>
-        <span>By recently released</span>
-        <div id="brand">
-          <label for="brand-select">By brands:</label>
-          <select name="brand" id="brand-select"> </select>
+      <div class="row text-center mx-auto">
+        <div class="col-md-3">
+          <div id="show">
+            <label for="show-select">Show : </label>
+            <select name="show" id="show-select">
+              <option value="12">12</option>
+              <option value="24">24</option>
+              <option value="48">48</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="page">
+            <label for="page-select">Go to page:</label>
+            <select name="page" id="page-select"> </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="filters">
+            <input type="checkbox" name="check_reasonable" id="check_reasonable">
+            <label for="check_reasonable">By reasonable price</label>
+            <div id="brand">
+              <label for="brand-select">By brands:</label>
+              <select name="brand" id="brand-select"> </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div id="sort">
+            <label for="sort-select">Sort:</label>
+            <select name="sort" id="sort-select">
+              <option value="price-asc">Cheaper</option>
+              <option value="price-desc">Expensive</option>
+              <option value="date-asc">Recently released</option>
+              <option value="date-desc">Anciently released</option>
+            </select>
+          </div>
         </div>
       </div>
-      <div id="sort">
-        <label for="sort-select">Sort:</label>
-        <select name="sort" id="sort-select">
-          <option value="price-asc">Cheaper</option>
-          <option value="price-desc">Expensive</option>
-          <option value="date-asc">Recently released</option>
-          <option value="date-desc">Anciently released</option>
-        </select>
-      </div>
     </section>
-    <section id="indicators">
-      <h2>Indicators</h2>
-      <div>
-        <span>Number of products</span>
-        <span id="nbProducts">0</span>
+
+    <hr style="width:75%">
+
+      <div class="row mx-auto">
+        <div class="col-md-4 offset-md-1">
+          <section id="indicators" class="text-center">
+            <h2 style="text-decoration: underline;">Indicators</h2>
+            <div>
+              <span><strong>Number of products :</strong></span>
+              <span id="nbProducts">0</span>
+            </div>
+            <div>
+              <span><strong>Number of new products :</strong></span>
+              <span>0</span>
+            </div>
+            <div>
+              <span><strong>p50 price value :</strong></span>
+              <span>0</span>
+            </div>
+            <div>
+              <span><strong>p90 price value :</strong></span>
+              <span>0</span>
+            </div>
+            <div>
+              <span><strong>p95 price value :</strong></span>
+              <span>0</span>
+            </div>
+            <div>
+              <span><strong>Last released date :</strong></span>
+              <span>2020-01-01</span>
+            </div>
+          </section>
+        </div>
+        <div class="col-md-5 text-center">
+          <section id="products"></section>
+        </div>
       </div>
-      <div>
-        <span>Number of new products</span>
-        <span>0</span>
-      </div>
-      <div>
-        <span>p50 price value</span>
-        <span>0</span>
-      </div>
-      <div>
-        <span>p90 price value</span>
-        <span>0</span>
-      </div>
-      <div>
-        <span>p95 price value</span>
-        <span>0</span>
-      </div>
-      <div>
-        <span>Last released date</span>
-        <span>2020-01-01</span>
-      </div>
-    </section>
-    <section id="products"></section>
+
+
     <script type="text/javascript" charset="UTF-8" src="portfolio.js"></script>
   </body>
 </html>
